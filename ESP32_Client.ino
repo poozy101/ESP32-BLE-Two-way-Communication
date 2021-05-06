@@ -132,16 +132,6 @@ void setup() {
   pBLEScan->start(5, false);
   Serial.println("Look for our Server");
 
-  //  BLEScan* pBLEScan = BLEDevice::getScan();
-  //pBLEScan->setAdvertisedDeviceCallbacks(new MyAdvertisedDeviceCallbacks());
-  ////pBLEScan->setInterval(1349);*****************************
-  ////pBLEScan->setWindow(449);*****************************
-  ////pBLEScan->setActiveScan(true);*****************************
-  ////pBLEScan->start(5, false);*****************************
-  //pBLEScan->setActiveScan(true);
-  //pBLEScan->start(30);
-
-  
 } // End of setup.
 
 
