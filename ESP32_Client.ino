@@ -18,7 +18,11 @@ static void notifyCallback(BLERemoteCharacteristic* pBLERemoteCharacteristic, ui
 {
     Serial.println("*********");
     Serial.println("Received From Server: ");
-    Serial.println(String((char *)pData));
+    
+    String notifyString = (char *)pData; //(char *)pData has a chance of having a size larger than the length so this removes potential for garbage bytes
+    notifyString = notifyString.substring(0,length);
+    Serial.println(notifyString);
+    
     Serial.println("*********");
 }
 class MyClientCallback : public BLEClientCallbacks 
